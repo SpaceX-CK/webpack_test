@@ -1,22 +1,20 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const {resolve} = require('path');
+const {resolve} = require('path');
 
 module.exports = {
     entry: './src/index.js',
     // output is where the bundle file will be created
     output: { 
-        
-        filename: 'build.js',
-        path: __dirname + '/build',
+        filename: 'main.js',
+        // path: __dirname + '/build',
         // assetModuleFilename: 'images/[name][ext]'
-        // path: resolve(__dirname, 'build'),
+        path: resolve(__dirname, 'build'),
 
     },  
     // module is where you can add loaders
     module: {
         //loader "use" excecutes from top to bottom
         rules: [
-
             {
                 test: /\.css$/,
                 use: [
@@ -27,45 +25,43 @@ module.exports = {
                 ]
             },
             // {
-            //     //use in css images to be loaded by webpack
-            //     test: /\.(png|jpg|gif)$/i,
-            //     // while only one loader can be used, we can use multiple loaders
-            //     // url-loader requires file-loader and url-loader
+            //     // test: /\.(png|jpe?g|gif)$/i,
+            //     test: /\.(png|jpg|gif)$/,
             //     loader: 'file-loader',
-            //     // use: [ 'file-loader', 'url-loader' ],
-            //     options: {
-            //         // while images are loaded as a base64 string
-            //         // limit to 8kb images size
-            //         // limit : 8*1024,
-            //         //problems with the url-loader default use es6 , but html-loader requires es5 img import is commonjs
-            //         //without esmodule, the import will not work eg: result [object Module]
+            //     options : {
+            //         // outputPath: 'images',
             //         esModule: false,
+            //         // output file name
+            //         // [name] is the name of the file
+            //         // [ext] is the extension of the file
+            //         // name: 'images/[name].[ext]'
+            //         // hash is a unique hash for the file limit 10 chars
+            //         // name: '[name].[ext]',
+            //         name: '[hash:10].[ext]'
             //     }
             // },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                // test: /\.(png|jpg|gif)$/i,
+                test: /\.(svg|png|jpg|jpeg|gif)$/,
+                // include: 'images',
                 loader: 'file-loader',
-                options : {
-                    // outputPath: 'images',
+                options: {
                     esModule: false,
-                    // output file name
-                    // [name] is the name of the file
-                    // [ext] is the extension of the file
-                    // name: 'images/[name].[ext]'
-                    // hash is a unique hash for the file limit 10 chars
-                    // name: '[name].[ext]',
-                    name: '[hash:10].[ext]'
+                    name: 'images/[name].[ext]',
+                    // name: 'images/[hash:6].[ext]'
                 }
             },
-            {
-                test:/\.html$/,
-                // html-loader is used to load images in html files
-                loader: 'html-loader',
-            },
             // {
-            //     exclude: /\.(html|js|css)$/,
+            //     test:/\.html$/,
+            //     // html-loader is used to load images in html files
+            //     loader: 'html-loader',
+            // },
+            // {
+            //     exclude: /\.(html|js|css|svg|png|jpg|jpeg|gif)$/,
             //     loader: 'file-loader',
+            //     options: {
+            //         name: '[name].[ext]',
+            //         // outputPath: '/images/'
+            //     }
             // }
         ]
     },
