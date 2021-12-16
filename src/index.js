@@ -1,2 +1,2 @@
 console.log('Hello World');
-import './images/ins.jpg';
+// import './images/ins.jpg';
