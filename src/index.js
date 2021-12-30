@@ -1,7 +1,11 @@
 console.log('Hello World');
 import './css/first.css';
-// import './images/ins.jpg';
-// "browserlist": {
+const foo = () => {
+    console.log('foo');
+};
+foo();
+
+// "browserslist": {
 //     "development": [
 //       "last 2 Chrome versions",
 //       "last 2 Firefox versions",
