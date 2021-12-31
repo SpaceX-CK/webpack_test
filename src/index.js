@@ -1,7 +1,9 @@
-console.log('Hello World');
 import './css/first.css';
+
+console.log('Hello World');
+
 const foo = () => {
-    console.log('foo');
+  console.log('foo');
 };
 foo();
 
@@ -18,4 +20,4 @@ foo();
 //       "not dead",
 //       "not op_mini all"
 //     ]
-//   }
+//  }
