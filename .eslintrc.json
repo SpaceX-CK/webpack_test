@@ -14,4 +14,7 @@
         "no-console": "off",
         "linebreak-style": ["error", "windows"]
     }
+    
 }
+    // npx eslint --init
+
