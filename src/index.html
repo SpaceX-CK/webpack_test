@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/first.css">
+    <link rel="stylesheet" href="./css/first.css" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+
+    <div> </div>
+  </head>
+
+  <body>
     <div>
-        
+      <img src="./images/ins.jpg" alt="" />
     </div>
 
-</head>
-<body>
-    <div>
-        <img src="./images/ins.jpg" alt="">
+    <div class="box"> </div>
+    <div class="box2"> </div>
+    <div class="bg-blue-600 h-12 w-12">
+      <button
+        class="
+          relative
+          bg-blue-500
+          text-white
+          p-6
+          rounded
+          text-2xl
+          font-bold
+          overflow-hidden
+        "
+      >
+        Example button
+        <div class="ribbon bg-red-500 text-sm whitespace-no-wrap px-4">ABC</div>
+      </button>
+      <div class="m-3">
+        <button
+          class="
+            bg-white
+            text-gray-800
+            font-bold
+            rounded
+            border-b-2 border-red-500
+            hover:border-red-600 hover:bg-red-500 hover:text-white
+            shadow-md
+            py-2
+            px-6
+            inline-flex
+            items-center
+          "
+        >
+          <span class="mr-2">Close</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentcolor"
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
-
-    <div class="box">
-    </div>
-    <div class="box2">
-    </div>
-</body>
+  </body>
 </html>

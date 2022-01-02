@@ -1,4 +1,5 @@
 import './css/first.css';
+import './css/tailwind.css';
 
 console.log('Hello World');
 

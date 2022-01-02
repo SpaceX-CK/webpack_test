@@ -1,3 +1,5 @@
+// const tailwindcss = require('tailwindcss');
+// const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -25,6 +27,18 @@ module.exports = {
           // miniCssExtractPlugin.loader is a loader that extracts CSS into separate files.
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
+          // {
+          //   loader: 'postcss-loader',
+          //   options: {
+          //     postcssOptions: {
+          //       plugins: [
+          //         tailwindcss('./tailwind.config.js'),
+          //         autoprefixer,
+          //       ],
+          //     },
+          //   },
+          // },
         ],
       },
       {
