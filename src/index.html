@@ -1,69 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/first.css" />
-    <link rel="stylesheet" href="./css/tailwind.css" />
+<html lang="en" class="">
 
-    <div> </div>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- <link rel="stylesheet" src="./css/first.css" />
+  <link rel="stylesheet" src="./css/tailwind.css" /> -->
+  <script src="./script/import.js" defer></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
 
-  <body>
-    <div>
-      <img src="./images/ins.jpg" alt="" />
-    </div>
+  <div> </div>
+</head>
 
-    <div class="box"> </div>
-    <div class="box2"> </div>
-    <div class="bg-blue-600 h-12 w-12">
-      <button
-        class="
-          relative
-          bg-blue-500
-          text-white
-          p-6
-          rounded
-          text-2xl
-          font-bold
-          overflow-hidden
-        "
-      >
-        Example button
-        <div class="ribbon bg-red-500 text-sm whitespace-no-wrap px-4">ABC</div>
-      </button>
-      <div class="m-3">
-        <button
-          class="
-            bg-white
-            text-gray-800
-            font-bold
-            rounded
-            border-b-2 border-red-500
-            hover:border-red-600 hover:bg-red-500 hover:text-white
-            shadow-md
-            py-2
-            px-6
-            inline-flex
-            items-center
-          "
-        >
-          <span class="mr-2">Close</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="currentcolor"
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
-            />
-          </svg>
-        </button>
+<body class="dark:bg-gray-800">
+  <nav class="bg-gray-400  text-black dark:text-white dark:bg-stone-500">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="#" class="text-gray-100">
+            <!-- <img src="./images/logo.svg" alt="logo" class="h-8" /> -->
+          </a>
+          <div class="ml-4">
+            <a href="#" class="text-gray-100 hover:text-gray-200">
+              Home
+            </a>
+            <a href="#" class="ml-4 text-gray-100 hover:text-gray-200">
+              About
+            </a>
+            <a href="#" class="ml-4 text-gray-100 hover:text-gray-200">
+              Blog
+            </a>
+            <a href="#" class="ml-4 text-gray-100 hover:text-gray-200">
+              Contact
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center" x-data="{toggle: '0'}">
+          <span class="">
+            <svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </span>
+          <!-- Switch Container -->
+          <div :class="[toggle === '1' ? 'bg-green-400' : 'bg-gray-400']" class="w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1"
+            >
+            <!-- Switch -->
+            <div class="relative rounded-full w-12 h-6 transition duration-200 ease-linear"
+            :class="[toggle === '1' ? 'bg-green-400' : 'bg-gray-400']">
+            <label for="toggle"
+              class="absolute left-0 bg-white border-2 mb-2 w-6 h-6 rounded-full transition transform duration-100 ease-linear cursor-pointer"
+              :class="[toggle === '1' ? 'translate-x-full border-green-400' : 'translate-x-0 border-gray-400']"></label>
+            <input type="checkbox" id="toggle" name="toggle"
+              class="appearance-none w-full h-full active:outline-none focus:outline-none"
+              @click="toggle === '0' ? toggle = '1' : toggle = '0'" />
+          </div>
+          </div>
+      
+      
+          <span class="">
+            <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
-  </body>
+  </nav>
+
+  <main class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between mb-6">
+  </nav>
+
+  
+  <div class="flex justify-center items-center" >
+
+  </div>
+
+
+
+
+</body>
+
 </html>
+<script>
+  document.getElementById('toggle').addEventListener('click', function () {
+    let htmlElement = document.querySelector("html");
+    htmlElement.classList.toggle('dark');
+  });
+</script>

@@ -1,5 +1,6 @@
 import './css/first.css';
 import './css/tailwind.css';
+import './script/alpine';
 
 console.log('Hello World');
 
