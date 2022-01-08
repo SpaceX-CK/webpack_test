@@ -4,3 +4,43 @@
     background-color:red;
     
 }
+.moveRed {
+    animation:step1 20s infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes step1{
+    0%, 100% {
+        transform: translateY(-25%) translateX(-25%);
+      }
+      50% {
+        transform: translateY(0);
+      }
+  }
+  .moveBlue {
+    animation:step2 10s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0000ms;
+  }
+  
+  @keyframes step2{
+    0%   {transform: translateY(0) translateX(0);}
+    25%  {transform: translateY(0) translateX(15%);}
+    50%  {transform: translateY(-25%) translateX(0%)}
+    75%  {transform: translateY(-10%) translateX(-15%)}
+    100% {transform: translateY(0) translateX(0);}
+  }
+  
+  .moveGreen {
+    animation:step3 10s infinite;
+    animation-timing-function: linear;
+    animation-delay: 1000ms;
+  }
+  
+  @keyframes step3{
+    0%   {transform: translateY(0) translateX(0);}
+    25%  {transform: translateY(25%) translateX(0%);}
+    50%  {transform: translateY(0%) translateX(-25%)}
+    75%  {transform: translateY(15%) translateX(10%)}
+    100% {transform: translateY(0) translateX(0);}
+  }

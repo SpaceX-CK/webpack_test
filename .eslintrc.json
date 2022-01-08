@@ -15,7 +15,12 @@
         "linebreak-style": ["error", "windows"],
         "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     },
-    "eslintIgnore": ["./build"]
+    "ignorePatterns": ["node_modules","build"]
+    // ,
+    // "eslintIgnore": [
+    //     "node_modules",
+    //     "build"
+    // ]
 }
     // npx eslint --init
 

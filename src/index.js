@@ -1,4 +1,5 @@
 import './css/first.css';
+import './css/cyber.css';
 import './css/tailwind.css';
 import './script/alpine';
 
